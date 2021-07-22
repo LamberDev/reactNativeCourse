@@ -25,7 +25,7 @@ import ColorCounter from '../components/ColorCounter';
             Estamos dandole a este primer argumento un objeto, que contiene el estado y con el valor predeterminado. Muy parecido
             a utilizar useState.
 
-        - El segundo argumento debe de ser un objeto que describa el cambio que se va a realizar en el estado o nuestro primer argumento
+        - El segundo argumento debe de ser un objeto que describa el cambio que se va a realizar en el estado , nuestro primer argumento
             podría tener un aspecto similar a este:
                 {colorToChange: 'red', amount: 20}
             La idea es que con este segundo argumento nosotros lo obtengamos para que con sus propiedades actualizemos el primer argumento
@@ -44,6 +44,8 @@ const COLOR_INCREMENT = 20;
 const reducer = (state, action) => {
 // state === variable de estado // state === {red: number, green: number, blue: number}
 // action === cambio que hacemos al estado // action === {colorToChange: 'red' | 'blue' | 'green', amount: 15/-15}
+// por convencion en el objeto action se define la propiedad TYPE que es un String que define la operacion a realizar y PAYLOAD que son los datos que necesitamos para llevar a cabo el cambio
+
 
     switch(action.colorToChange) {
         case 'red':
@@ -51,7 +53,7 @@ const reducer = (state, action) => {
              // Devuelvo un nuevo objeto { copiando el estado, modificando lo que quiero en este nuevo objeto}
              // Al final estoy devolviendo un objeto igual a STATE pero sin devolver STATE ni modificar el valor de STATE
         case 'green':
-            return {...state, green: state.green + action.green};
+            return {...state, green: state.green + action.amount};
         case 'blue':
             return {...state, blue: state.blue + action.amount};
         

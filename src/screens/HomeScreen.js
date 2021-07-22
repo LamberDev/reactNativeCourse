@@ -35,7 +35,10 @@ const HomeScreen = ({navigation}) => { // Nos traemos el objeto navigation de la
       title="Go to CounterScreen"
       onPress = {() => navigation.navigate('Counter') }
     />  
-  
+  <Button 
+      title="Go to CounterReducer"
+      onPress = {() => navigation.navigate('CounterReducer') }
+    />  
   <Button 
       title="Go to ColorScreen"
       onPress = {() => navigation.navigate('Color') }
@@ -48,6 +51,10 @@ const HomeScreen = ({navigation}) => { // Nos traemos el objeto navigation de la
   <Button 
       title="Go to SquareScreen Reducer"
       onPress = {() => navigation.navigate('SquareReducer') }
+    />
+  <Button 
+      title="Go to TextScreen"
+      onPress = {() => navigation.navigate('TextScreen') }
     />  
 
  {/* <TouchableOpacity onPress={() =>  navigation.navigate('List')}>
