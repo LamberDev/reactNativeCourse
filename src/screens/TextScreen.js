@@ -17,6 +17,7 @@ const TextScreen = () => {
      * */
 
     const [name, setName] = useState(''); //Utilizamos use state definiendo el estado, la funcion que cambia su valor y utilizamos el hook con el valor predeterminado del estado
+    const [password, setPasswrod] = useState('');
     return (
         <View>
             <Text>Text Input Screen</Text>
@@ -29,7 +30,23 @@ const TextScreen = () => {
                 onChangeText={userInput => setName(userInput)}
             ></TextInput>
 
-            <Text>My name is: {name}</Text>
+            <Text>My name is: {name}</Text> 
+
+            <Text>Ejercicio: Aparecer y desparecer JSX con condicionales</Text> 
+
+            <Text>Enter Password</Text> 
+
+            <TextInput 
+                style={styles.input}
+                autoCapitalize="none"
+                autoCorrect={false}
+                value= {password}
+                onChangeText={userInput => setPasswrod(userInput)}
+            ></TextInput>
+
+            { password.length < 5 ?  <Text>Password must be longer than 5 characters</Text> : null}
+            
+            {/* utilizamos los operadores ternarios para ejercer una condicion, si es true se muestra el JSX sino no mse muestra nada */}
             
         </View>
     )

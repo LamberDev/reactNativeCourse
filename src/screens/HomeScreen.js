@@ -56,7 +56,14 @@ const HomeScreen = ({navigation}) => { // Nos traemos el objeto navigation de la
       title="Go to TextScreen"
       onPress = {() => navigation.navigate('TextScreen') }
     />  
-
+  <Button 
+      title="Go to Box Object Model Screen"
+      onPress = {() => navigation.navigate('BoxScreen') }
+    /> 
+  <Button 
+      title="Go to Styles Exercise 1"
+      onPress = {() => navigation.navigate('StylesEx01') }
+    /> 
  {/* <TouchableOpacity onPress={() =>  navigation.navigate('List')}>
       <Text>Go To List Demo</Text>
       <Text>Go To List Demo</Text>
